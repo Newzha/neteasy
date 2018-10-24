@@ -10,6 +10,9 @@ import Category from '../pages/Category/Category.vue'
 import ShopCar from '../pages/ShopCar/ShopCar.vue'
 import Profile from '../pages/Profile/Profile.vue'
 
+// 懒加载主路由
+
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -17,19 +20,31 @@ const router = new VueRouter({
   routes: [
     {
       path: '/msite',
-      component: MSite
+      component: MSite,
+      meta: {
+        showFooter: true // 标识需要显示footer
+      }
     },
     {
       path: '/findthings',
-      component: FindThings
+      component: FindThings,
+      meta: {
+        showFooter: true // 标识需要显示footer
+      }
     },
     {
       path: '/category',
-      component: Category
+      component: Category,
+      meta: {
+        showFooter: true // 标识需要显示footer
+      }
     },
     {
       path: '/shopcar',
-      component: ShopCar
+      component: ShopCar,
+      meta: {
+        showFooter: true // 标识需要显示footer
+      }
     },
     {
       path: '/profile',
