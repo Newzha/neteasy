@@ -81,6 +81,8 @@
   .ItemWarp
     margin-bottom: (.26667rem);
     background-color: #fff;
+    width 100%
+    overflow hidden
     >.header
       background-size: (10*75/$rem) (3.46667*75/$rem);
       height: (3.46667*75/$rem);

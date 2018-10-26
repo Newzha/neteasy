@@ -7,7 +7,7 @@
         <a class="searchWarp" href="javascript:;" @click="$router.replace('/fingthings')">
           <i class="icon-search"></i>
         </a>
-        <a class="shopcarWarp" href="javascript:;" @click="$router.replace('/shopcart')">
+        <a class="shopcarWarp" href="javascript:;" @click="$router.replace('/shopcar')">
           <i class="icon-shop"></i>
         </a>
       </div>
@@ -20,11 +20,13 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/index.styl"
   .headerContainer
-    position absolute
+    /*position absolute*/
+    position fixed
     top 0
     left 0
     width 100%
     height (87/$rem)
+    z-index 10
     background-color #fafafa
     &:after
       content ''

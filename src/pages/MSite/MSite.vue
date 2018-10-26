@@ -494,7 +494,7 @@ html,body
   overflow hidden
   .msiteContainer
     width 100%
-    height 100%
+    /*height 100%*/
     /*overflow: hidden;*/
     .headerWarp
       background #fff
