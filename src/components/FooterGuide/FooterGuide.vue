@@ -59,7 +59,7 @@
     display flex
     text-align: center;
     align-items: center;
-    align-items: center;
+
     .guide_item
       display flex
       flex 1

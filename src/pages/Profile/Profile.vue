@@ -117,7 +117,6 @@
 <script>
   import HeaderGuide from '../../components/HeaderGuide/HeaderGuide.vue'
   export default {
-
     data() {
       return {
         atPage: '' ,//跳转手机或邮箱登录页面
@@ -157,7 +156,6 @@
         console.log('page')
       }
     },
-
     components: {
       HeaderGuide
     }

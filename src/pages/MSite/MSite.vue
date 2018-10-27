@@ -334,8 +334,8 @@
               </div>
             </div>
           </div>
-          <GoodsGrid v-for="(cate, index) in msite.cateList" :key="index"
-                      v-if="msite.cateList" :cateData="cate"/>
+          <GoodsGrid v-for="(item, index) in msite.cateList" :key="index"
+                      v-if="msite.cateList" :cateData="item"/>
           <div class="downLoad-copyright">
             <div>
               <div class="downLoad">
@@ -407,12 +407,13 @@
           // 初始化列表显示之后执行
           this._initScroll()
           this.countdownTime = this.msite.flashSaleIndexVO.remainTime
+          // 轮播图
           new Swiper('.swiper-container', {
 //          centeredSlides: true,
-            /*autoplay: {
+            autoplay: {
               delay: 2500,
-              disableOnInteraction: false,
-            },*/
+              disableOnInteraction: false, // 允许自动轮播
+            },
             // 需要分页器
             pagination: {
               el: '.swiper-pagination'
@@ -467,7 +468,7 @@
           scrollX:false,
           scrollY:true,
           probeType: 1,
-          scrollbar:true
+//          scrollbar:true
         });
         // 专题精选滑动
         new BScroll(topicScrollBox,{

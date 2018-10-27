@@ -40,6 +40,18 @@ export default {
       // 在更新状态后立即调用
       cb && cb()
     }
+  },
+  // 异步获取category
+  async getCategory ({commit}, cb) {
+    // 发送ajax请求
+    const result = await reqCategory()
+    if(result.code===0){
+      const category_data = result.data
+      // commit给mutation
+      commit(RECEIVE_CATEGORY, {category_data})
+      // 在更新状态后立即调用
+      cb && cb()
+    }
   }
 
 

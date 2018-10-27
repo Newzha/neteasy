@@ -15,7 +15,9 @@
       <span class="inner">更多精彩</span>
     </div>
     <div class="content">
-      <a href="javascript:;" class="item" v-for="item in data" :key="item.topicId">
+      <!--<a href="javascript:;" class="item" v-for="item in data" :key="item.topicId">-->
+      <!--<div>[Vue warn]: Duplicate keys detected: '573'. This may cause an update error.</div>-->
+      <a href="javascript:;" class="item" v-for="(item, index) in data" :key="index">
         <img v-lazy="item.itemPicUrl" alt="img">
         <!--<img :src="item.itemPicUrl" alt="img">-->
         <div class="desc">{{item.title}}</div>
@@ -26,7 +28,7 @@
 <script>
   export default {
     props: {
-      surpise: Object,
+//      surpise: Object,
       data: Array
     }
   }

@@ -16,5 +16,8 @@ export default {
   [RECEIVE_FINDTHINGS] (state, {findthings}) {
     state.findthings = findthings
   },
+  [RECEIVE_CATEGORY] (state, {category_data}) {
+    state.category_data = category_data
+  }
 
 }

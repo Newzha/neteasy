@@ -9,7 +9,7 @@
           <a href="javascript:;">
             <div class="cate-header">
               <div class="img-warp">
-                <img :src="item.listPicUrl">
+                <img v-lazy="item.listPicUrl">
               </div>
               <p class="cate-info">{{item.simpleDesc}}</p>
             </div>
